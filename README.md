@@ -6,5 +6,5 @@ has the ability to create a data‐file that can be processed by the
 second program, the Archaeological Dig Tool (ADT) where tools can be
 applied to the viewable map to find features and finds.
 
-Done in collaboration with Karen Trevino.
+Developed in collaboration with Karen Trevino.
 
