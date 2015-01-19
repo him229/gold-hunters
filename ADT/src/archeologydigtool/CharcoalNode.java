@@ -1,0 +1,89 @@
+/*
+ * @author karentrevino
+ * 1000908298
+ * Team Gold Hunters
+ * Inspired by Dr. Becker's Mary Ellen Carter and MyPopUp Example
+ * Last Modified: 11/24/14
+ */
+package archeologydigtool;
+
+/**
+ * CharcoalNode contains instance variables of a charcoal node
+ * @author karentrevino
+ */
+public abstract class CharcoalNode implements Comparable<CharcoalNode>{
+    
+    private int date;
+    private int row;
+    private int col;
+           
+    
+    /**
+     * Constructor class sets charcoal node date
+     * @param date1
+     */
+    public CharcoalNode(int date1)
+    {
+        
+        date = date1;
+    }
+    
+    /**
+     * This function sets the row and column
+     * @param row1
+     * @param col1
+     */
+    public void setRowCol(int row1, int col1){
+        row = row1;
+        col = col1;
+    }
+    
+    /**
+     * Returns the date
+     * @return
+     */
+    public int getDate(){
+        return date;
+    }
+
+    /**
+     * Returns row
+     * @return 
+     */
+    public int getRow(){
+        return row;
+    }
+
+    /**
+     * Returns column
+     * @return
+     */
+    public int getCol(){
+        return col;
+    }
+    
+    @Override
+    public int compareTo(CharcoalNode arg0) {
+            // TODO Auto-generated method stub
+
+            int iResult=0;
+
+            if (this.getDate()==arg0.getDate())
+            {
+                    iResult=0;
+            }
+            else if (this.getDate()>arg0.getDate())
+            {
+                    iResult=1;
+            }
+            else if (this.getDate()<arg0.getDate())
+            {
+                    iResult=-1;
+            }
+
+
+            return iResult;
+    }
+    
+    abstract int respondToMetalDetector();
+}
